@@ -21,7 +21,7 @@ function Header({ visibleDates, onprev, onNext }) {
                 </div>
 
                 <div className='flex flex-col gap-1' >
-                    <span className='text-zinc-400 text-sm'>{startDate && format(startDate, 'MM d')}- {endDate && format(endDate, "MMM d")}</span>
+                    <span className='text-zinc-400 text-sm'>{startDate && format(startDate, 'MMM d')}- {endDate && format(endDate, "MMM d")}</span>
                     <div className='flex item-center gap-3'>
                         <Button children="prev" onclick={onprev} />
                         <Button children="next" onclick={onNext} disabled={visibleDates.some(d => isToday(d))} />
